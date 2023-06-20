@@ -17,20 +17,24 @@ namespace BuilderDesignPattern.Builders
         {
         }
 
-        public HtmlElement AddChild(string childName, string childText)
+        #region Implementing the fluent builder approach by returning the HtmlBuilder instance in the AddChild methods
+        public HtmlBuilder AddChild(string childName, string childText)
         {
             var e = new HtmlElement(childName, childText);
             root.Elements.Add(e);
-            return root;
+            return this;
         }
-        public   void AddChild(HtmlBuilder e)
+        public HtmlBuilder AddChild(HtmlBuilder e)
         {
             root.Elements.Add(e.root);
+            return this;
         }
-        public void AddChild(HtmlElement e)
+        public HtmlBuilder AddChild(HtmlElement e)
         {
             root.Elements.Add(e);
-        }
+            return this;
+        } 
+        #endregion
 
         public override string ToString()
         {

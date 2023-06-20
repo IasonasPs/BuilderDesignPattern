@@ -33,8 +33,7 @@ namespace BuilderDesignPattern
 
             var builder = new HtmlBuilder("ul");
             var y = builder.AddChild("li", "some text");
-            builder.AddChild("li", "some text");
-            builder.AddChild("li", "some text");
+            builder.AddChild("li", "some text").AddChild("li", "some text");
             WriteLine(builder.ToString());
 
         }
