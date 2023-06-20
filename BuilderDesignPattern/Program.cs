@@ -1,61 +1,17 @@
-﻿using System.Text;
-using BuilderDesignPattern.Models;
+﻿using BuilderDesignPattern.Builders;
+using System.Text;
 using static System.Console;
 
 namespace BuilderDesignPattern
 {
-    public class HtmlElement : Models.HtmlElement
-    {
-        public HtmlElement()
-        {
-
-        }
-        public HtmlElement(string name, string text)
-        {
-            Name = name ?? throw new ArgumentNullException(paramName: "name");
-            Text = text ?? throw new ArgumentNullException(paramName: "text");
-        }
-        public HtmlElement(string name, string text, List<HtmlElement> e)
-        {
-            Name = name ?? throw new ArgumentNullException(paramName: "name");
-            Text = text ?? throw new ArgumentNullException(paramName: "text");
-            Elements = e.ToList();
-        }
-    }
-
-    public class HtmlBuilder
-    {
-        private readonly string rootName;
-        HtmlElement root = new HtmlElement();
-        public HtmlBuilder(string rootName)
-        {
-            this.rootName = rootName;
-            root.Name = rootName;
-        }
-
-        public void AddChild(string childName,string childText)
-        {
-            var e = new HtmlElement(childName,childText);
-            root.Elements.Add(e);
-        }
-
-        public override string ToString()
-        {
-            return root.ToString();
-        }
-        public void Clear()
-        {
-            root =  new HtmlElement {Name =  rootName};
-            root.Elements.Clear();
-        }
-    }
-
-
     public class Program
     {
         static void Main(string[] args)
         {
-            #region Introduction
+            //var y = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //var z = Directory.GetDirectories(y).ToArray();
+            //foreach ( var f in z ) Console.WriteLine(f);
+            #region Introduction without using Builder
             //var hello = "hello";
             //var sb = new StringBuilder();
             //sb.Append("<p>");
@@ -73,26 +29,45 @@ namespace BuilderDesignPattern
             //sb.Append("</ul>");
             //WriteLine(sb); 
             #endregion
+            //NumberOfitems(10);
 
-            //var list = new List<HtmlElement>();
-            //HtmlElement h0 = new HtmlElement("h0", "thats ");
-            //list.Add(h0);
-            //HtmlElement h1 = new HtmlElement("h1", "thats ");
-            //list.Add(h1);
-            //HtmlElement h2 = new HtmlElement("h2", "thats an encapsulated text", list);
-            //list.Add(h2);
-            //HtmlElement he3 = new HtmlElement("h3", "thats an encapsulated text", list);
-            //list.Add(he3);
-            //HtmlElement h = new HtmlElement("h", "thats a text", list);
+            var builder = new HtmlBuilder("ul");
+            var y = builder.AddChild("li", "some text");
+            builder.AddChild("li", "some text");
+            builder.AddChild("li", "some text");
+            WriteLine(builder.ToString());
 
-            //WriteLine(h.ToString());
-
-            var b = new HtmlBuilder("ul");
-            //b.AddChild("h1","Welcome");
-
-
-
-            WriteLine(b);
         }
+        //private static void NumberOfitems(int n)
+        //{
+        //    #region Create # encapsulated HtmlElements
+        //    var b = new HtmlBuilder("ul");
+        //    b.AddChild("h1", "Welcome");
+        //    var c = new HtmlBuilder( );
+
+        //    var times = n;
+        //    HtmlBuilder[] array = new HtmlBuilder[times]; // Create an array to store HtmlBuilder objects
+
+        //    for (int i = 0; i < times; i++)
+        //    {
+        //        if (i == array.Length - 1)
+        //        {
+        //            array[i] = new HtmlBuilder("p");
+        //            array[i].AddChild(b);
+        //        }
+        //        else
+        //        {
+        //            array[i] = new HtmlBuilder("p");
+        //        }
+        //        if (i > 0)
+        //        {
+        //            array[i - 1].AddChild(array[i]);
+        //        }
+        //    }
+
+        //    c.AddChild(array[0]);
+        //    Console.WriteLine(c);
+        //    #endregion
+        //}
     }
 }
