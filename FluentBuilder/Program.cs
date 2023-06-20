@@ -14,6 +14,8 @@ namespace FluentBuilder
             //builder==>PersonInfoBuilder==>PersonJobBuilder
 
             Console.WriteLine(  builder.ToString());
+
+
         }
     }
 }
