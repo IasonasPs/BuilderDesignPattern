@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderDesignPattern", "BuilderDesignPattern\BuilderDesignPattern.csproj", "{FAD31EEA-0112-47C6-B0A8-C472CC614C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilder", "FluentBuilder\FluentBuilder.csproj", "{BCFE3FC9-CE91-40AB-B175-0DB2CC96929C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilder", "FluentBuilder\FluentBuilder.csproj", "{BCFE3FC9-CE91-40AB-B175-0DB2CC96929C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilderInheritance", "FluentBuilderInheritance\FluentBuilderInheritance.csproj", "{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BCFE3FC9-CE91-40AB-B175-0DB2CC96929C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCFE3FC9-CE91-40AB-B175-0DB2CC96929C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCFE3FC9-CE91-40AB-B175-0DB2CC96929C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
