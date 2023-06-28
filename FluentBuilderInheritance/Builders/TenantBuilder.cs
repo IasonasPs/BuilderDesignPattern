@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FluentBuilderInheritance.Builders
 {
-    public class TenantBuilder
+    public class TenantBuilder<TBuilder>  where TBuilder : TenantBuilder<TBuilder>
     {
         protected readonly Tenant _tenant;
 
@@ -16,15 +16,15 @@ namespace FluentBuilderInheritance.Builders
             _tenant = new Tenant();
         }
 
-        public TenantBuilder WithId(string id)
+        public TBuilder WithId(string id)
         {
             _tenant.Id = id;
-            return this;
+            return (TBuilder)this;
         }
-        public TenantBuilder WithBaseUrl(string baseUrl) 
+        public TBuilder WithBaseUrl(string baseUrl) 
         {
             _tenant.BaseUrl = new Uri(baseUrl);
-            return this;
+            return (TBuilder)this;
         }
 
         public Tenant Build() 
@@ -33,3 +33,7 @@ namespace FluentBuilderInheritance.Builders
         }
     }
 }
+
+//* we Make an explicit cast in the methods in order to turn TenantBuilder<TBuilder> to TBuilder
+//*
+//*

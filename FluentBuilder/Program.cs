@@ -13,6 +13,10 @@ namespace FluentBuilder
             //We cant go the other way because of the order of the inheritance
             //builder==>PersonInfoBuilder==>PersonJobBuilder
 
+            //var builder0 = new PersonJobBuilder();
+            //builder0.Called("dfddffdf").WorksAsA("sdfsdf");
+
+
             Console.WriteLine(  builder.ToString());
 
 

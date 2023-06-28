@@ -8,9 +8,6 @@ namespace BuilderDesignPattern
     {
         static void Main(string[] args)
         {
-            //var y = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //var z = Directory.GetDirectories(y).ToArray();
-            //foreach ( var f in z ) Console.WriteLine(f);
             #region Introduction without using Builder
             //var hello = "hello";
             //var sb = new StringBuilder();
@@ -32,11 +29,23 @@ namespace BuilderDesignPattern
             //NumberOfitems(10);
 
             var builder = new HtmlBuilder("ul");
-            var y = builder.AddChild("li", "some text");
-            builder.AddChild("li", "some text");
-            builder.AddChild("li", "some text");
-            WriteLine(builder.ToString());
 
+            var builder0 = new HtmlBuilder("ol");
+            builder.AddChild(builder0);
+
+            var builder1 = new HtmlBuilder("h1");
+            builder0.AddChild(builder1);
+
+            var builder2 = new HtmlBuilder("h2");
+            builder1.AddChild(builder2);
+
+            var builder3 = new HtmlBuilder("h3");
+            builder2.AddChild(builder3);
+
+            var builder4 = new HtmlBuilder("h4");
+            builder3.AddChild(builder4);
+
+            WriteLine(builder.ToString());
         }
         //private static void NumberOfitems(int n)
         //{

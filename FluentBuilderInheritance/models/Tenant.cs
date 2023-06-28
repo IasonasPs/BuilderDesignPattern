@@ -15,7 +15,7 @@ namespace FluentBuilderInheritance.models
 
         public override string ToString()
         {
-            return $"Id:{Id} , BaseUrl:{BaseUrl}";
+            return $"Id:{Id} , BaseUrl:{BaseUrl} , Secret:{Secret}";
         }
     }
 }

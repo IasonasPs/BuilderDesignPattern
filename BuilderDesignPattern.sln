@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuilderDesignPattern", "Bui
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilder", "FluentBuilder\FluentBuilder.csproj", "{BCFE3FC9-CE91-40AB-B175-0DB2CC96929C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilderInheritance", "FluentBuilderInheritance\FluentBuilderInheritance.csproj", "{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentBuilderInheritance", "FluentBuilderInheritance\FluentBuilderInheritance.csproj", "{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepWiseBuilder", "StepWiseBuilder\StepWiseBuilder.csproj", "{F22B39BC-1193-488E-B8E8-003D97730F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testStepWisebuilder", "test\testStepWisebuilder.csproj", "{8704A332-E7D8-4AA0-9CB7-28643D01294D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalBuilder", "FunctionalBuilder\FunctionalBuilder.csproj", "{8E3F64F8-F53D-4649-9C3B-52A2C64E3726}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C36BD8-CBFE-4124-9131-BE5CBBF766D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22B39BC-1193-488E-B8E8-003D97730F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22B39BC-1193-488E-B8E8-003D97730F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22B39BC-1193-488E-B8E8-003D97730F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22B39BC-1193-488E-B8E8-003D97730F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8704A332-E7D8-4AA0-9CB7-28643D01294D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8704A332-E7D8-4AA0-9CB7-28643D01294D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8704A332-E7D8-4AA0-9CB7-28643D01294D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8704A332-E7D8-4AA0-9CB7-28643D01294D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E3F64F8-F53D-4649-9C3B-52A2C64E3726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E3F64F8-F53D-4649-9C3B-52A2C64E3726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E3F64F8-F53D-4649-9C3B-52A2C64E3726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E3F64F8-F53D-4649-9C3B-52A2C64E3726}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

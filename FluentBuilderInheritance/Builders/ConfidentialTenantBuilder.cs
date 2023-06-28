@@ -1,4 +1,4 @@
-﻿using FluentBuilderInheritance.models;
+﻿ using FluentBuilderInheritance.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,13 +8,23 @@ using System.Threading.Tasks;
 
 namespace FluentBuilderInheritance.Builders
 {
-    public class ConfidentialTenantBuilder : TenantBuilder
-    {
+    //public class ConfidentialTenantBuilder :  TenantBuilder<ConfidentialTenantBuilder>
+    //{
 
-        public ConfidentialTenantBuilder WithSecret(string secret) 
+    //    public ConfidentialTenantBuilder WithSecret(string secret) 
+    //    {
+    //        _tenant.Secret = secret;
+    //        return this;
+    //    }
+    //}
+
+    public class ConfidentialTenantBuilder<tBuilder> : TenantBuilder<tBuilder>
+        where tBuilder : ConfidentialTenantBuilder<tBuilder>
+    {
+        public tBuilder WithSecret(string secret)
         {
             _tenant.Secret = secret;
-            return this;
+            return (tBuilder)this;
         }
     }
 }

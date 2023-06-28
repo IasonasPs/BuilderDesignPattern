@@ -23,9 +23,11 @@ namespace BuilderDesignPattern.Builders
             root.Elements.Add(e);
             return root;
         }
-        public   void AddChild(HtmlBuilder e)
+        public   HtmlBuilder AddChild(HtmlBuilder e)
         {
             root.Elements.Add(e.root);
+
+            return this;
         }
         public void AddChild(HtmlElement e)
         {
