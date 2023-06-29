@@ -1,4 +1,5 @@
-﻿using FluentBuilder.Models;
+﻿using FluentBuilder.Interfaces;
+using FluentBuilder.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace FluentBuilder.Builders
 {
-    public  class PersonInfoBuilder
+    public  class PersonInfoBuilder : PersonBuilder
     {
-        protected Person person = new Person();
-
         public PersonInfoBuilder Called(string name)
         {
             person.Name = name;
